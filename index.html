@@ -1,0 +1,381 @@
+<html>
+<head>
+    <style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+        td{
+            text-align: center;
+        }
+        
+</style>
+
+    <h1>Eklund, Back, Vanharanta & Visa</h1>
+    <p>336to340</p>
+    <p>illustrated in shades of green instead of black and white. In our opinion, this makes the
+        maps easier to interpret.</p>
+<p>&nbsp;&nbsp;&nbsp;Several hundred maps were trained during the course of the experiment. The first
+maps were trained using parameters selected according to the guidelines presented in
+the previous section. The best maps, rated according to quantization error and ease of
+readability, were then selected and used as a basis when training further maps. The final
+selected network size was 7 × 5 . We felt that this map size offered the best balance
+between cluster identification and movement illustration. Clusters were easier to identify
+than on a 9 × 6 sized map, and movements within the clusters were easier to identify than
+on a 5 × 4 sized map. A smaller map could have been used if a separate map had been
+trained for each year, but our intention was to use the same map for the entire dataset.
+A 7 × 5 sized map seemed large enough to incorporate the data for each year included
+in the test. The 7 × 5 lattice also conforms to the recommendation that the x-axis be =
+1.3 × the y-axis. The simpler neighborhood-set function or bubble, referring to an array
+of nodes around the winning node, Nc
+ (Kohonen et al., 1996) for hci(t) is preferred over
+the Gaussian function in the training of smaller maps (Kohonen, 1997), and was therefore
+    used in this experiment as well.</p>      .
+<p>&nbsp;&nbsp;&nbsp;The number of steps used in the final phase was generated directly from the
+recommendations provided in the previous section. Therefore, the initial phase includes
+1,750 steps and the final phase 17,500 steps. The learning rate factor was set to 0.5 in the
+first phase and 0.05 in the second, also as was recommended. The neighborhood radius
+was set to 12 for the first phase and 1.2 for the second. The initial radius was very large
+compared to the recommendations, but seemed to provide for the overall best maps. As
+the first phase is intended for rough training, the initial radius was allowed to be the entire
+map. In the fine-tuning phase, the radius was reduced considerably. Decreasing the
+    radius in the first phase only resulted in poorer maps.</p>
+<p>&nbsp;&nbsp;&nbsp;Kohonen (1997) noted that the selection of parameters appears to make little
+difference in the outcome when training small maps. This also appears to be the case in
+this experiment. As long as the initial selected parameters remained near the guidelines
+presented above, the changes in the quantization error were very small, usually as little
+as 0.001. Some examples of the parameters and outcomes are illustrated in Table 2. These
+are only a fraction of the entire training set, but illustrate well the small differences in
+results.</p>
+    <p>Table 2: Examples of trained 7x5 maps</p>
+    
+    
+    <body>
+<table style="width:100%">
+
+<tr>
+<th>7*5</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+</tr>
+
+
+<tr>
+<td>x-Dimension</td>
+<td>7</td>
+<td>7</td>
+<td>7</td>
+<td>7</td>
+<td>7</td>
+<td>7</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Y-Dimension</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Training length 1</td>
+<td>1,750</td>
+<td>1,750</td>
+<td>1,750</td>
+<td>1,750</td>
+<td>1,750</td>
+<td>1,750</td>
+<td>1,750</td>
+</tr>
+<tr>
+<td>Training Rate 1</td>
+<td>0.5</td>
+<td>0.5</td>
+<td>0.6</td>
+<td>0.5</td>
+<td>0.3</td>
+<td>0.4</td>
+<td>0.4</td>
+</tr>
+<tr>
+<td>Radius 1</td>
+<td>12</td>
+    <td>12</td>
+    <td>12</td>
+    <td>12</td>
+<td>12</td>
+<td>13</td>
+    <td>12</td>
+    </tr>
+<tr>
+<td>Training length 2</td>
+<td>17,500</td>
+<td>20,000</td>
+<td>17,500</td>
+<td>17,500</td>
+<td>17,500</td>
+<td>17,500</td>
+<td>17,500</td>
+</tr>
+<tr>
+<td>Training Rate 2</td>
+<td>0.05</td>
+<td>0.05</td>
+<td>0.05</td>
+<td>0.09</td>
+<td>0.05</td>
+<td>0.05</td>
+<td>0.04</td>
+</tr>
+<tr>
+<td>Radius 2</td>
+<td>1.2</td>
+<td>1.2</td>
+<td>1.2</td>
+<td>1.2</td>
+<td>1.2</td>
+<td>1.2</td>
+<td>1.2</td>
+</tr>
+<tr>
+<td>Error</td>
+<td>0.048624</td>
+<td>0.048626</td>
+<td>0.049509</td>
+<td>0.04877</td>
+<td>0.049675</td>
+<td>0.050086</td>
+<td>0.048241</td>
+
+</tr>
+
+</table>
+</body>
+
+    </head>
+<body>
+    
+    
+    <p>Table 2 shows that the changes in quantization errors are very small, irrespective
+of the parameters used. The map that was finally chosen was Map 1. It is notable that this
+map was trained using parameters generated directly from the recommendations above,
+with the exception of the network radius. Map 7 has a marginally better quantization error,
+but the difference is negligible, so the map closer to the original recommendations, Map
+1, was selected. The appearance of the maps was monitored throughout the experiment,
+but very small differences in the resulting maps surfaced. Although the maps might look
+slightly different, the same clusters containing approximately the same companies, were
+found in the same positions relative to each other. While the “good” end of one map might
+have been found on the opposite side of another map, the same clusters could still be
+seen to emerge. This shows the random initialization process of the self-organizing map,
+        but also proves that the results from one map to another are consistent.</p>
+<p>&nbsp;&nbsp;&nbsp;A single map including all five years of data was trained. By studying the final Umatrix map (Figure 4a), and the underlying feature planes (Appendix) of the map, a number
+of clusters of companies, and the characteristics of these clusters, can be identified
+        (Figure 4 b).</p>
+    <p>The groups and their characteristics are presented as the following:</p>
+<p>Group A consists of the best performing companies. Group A is divided into two
+subgroups: A1
+ and A2
+. The companies in subgroup A1
+ are the best performing of
+all companies, especially according to profitability ratios. These companies have
+very high profitability, solidity, and efficiency, and medium liquidity. Subgroup A2
+consists of well-performing companies with high profitability (especially in Return
+on Equity ratios), and average solidity and liquidity.</p>
+    <p>Figure 4: (a) The final U-matrix map, and (b) identified clusters on the map.</p>
+    <center>
+    <img src="image1.png">
+    </center>
+    <p>Table 3: Cluster descriptions</p>
+    <table>
+        <style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+td {
+  text-align: center;
+}
+</style>
+<body>
+<table style="width:100%">
+
+<tr >
+<th></th>
+<th>A1</th>
+<th>A2</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+</tr>
+
+
+<tr>
+<td>operating margin</td>
+<td>very high</td>
+<td>high</td>
+<td>low</td>
+<td>average</td>
+<td>low</td>
+<td>very low</td>
+</tr>
+<tr>
+<td>ROE</td>
+<td>high</td>
+<td>very high</td>
+<td>average</td>
+<td>high</td>
+<td>averagr</td>
+<td>low</td>
+</tr>
+
+<tr>
+<td>ROTA</td>
+<td>very high</td>
+<td>high</td>
+<td>average</td>
+<td>average</td>
+<td>low</td>
+<td>very low</td>
+</tr>
+    
+<tr>
+<td>Equity to capital</td>
+<td>very high</td>
+<td>low</td>
+<td>very high</td>
+<td>average</td>
+<td>average</td>
+<td>low</td>
+</tr>
+    
+<tr>
+<td>Quick ratio</td>
+<td>average</td>
+<td>high</td>
+<td>average</td>
+<td>very high</td>
+<td>low</td>
+<td>very low</td>
+</tr>
+    
+<tr>
+<td>interest coverage</td>
+<td>very high</td>
+<td>average</td>
+<td>low</td>
+<td>low</td>
+<td>low</td>
+<td>very low</td>
+</tr>
+    
+<tr>
+<td>Receivables turnover</td>
+<td>very high</td>
+<td>average</td>
+<td>high</td>
+<td>low</td>
+<td>very low</td>
+<td>average</td>
+</tr>
+    </table>
+</body>
+ <h2><b>Eklund, Back, Vanharanta & Visa</b></h2>
+    <p>Group B is an average group, performing decently according to all ratios. The companies
+        in Group B have low profitability but high solidity.</p>
+<p>Group C can be classed as a slightly above-average group. Group C has lower Equity to
+Capital ratios than Group B. However, Group C has higher profitability, notably in
+Return on Equity ratios. In addition, Group C contains the companies that have the
+highest liquidity. Group C has average to high profitability, average solidity, and
+    very high liquidity.</p>
+<p>Group D is best classed as slightly below average. The group has average solidity, but
+low profitability and very low liquidity. This group also contains the companies
+    with the lowest efficiency ratios.</p>
+<p>Group E is the poorest performing group. The group contains companies that are
+    performing poorly according to almost all ratios, especially profitability ratios.</p>
+<p>The characteristics of the groups are summarized in Table 3.</p>
+    <center><b>RESULTS</b></center>
+    <h3><b>Country Averages</b></h3>
+    <p>&nbsp;&nbsp;&nbsp;The first benchmarking objects were the averages for each country or region
+included in the experiment. The regional averages consist of the average values of the
+ratios of all companies from that region. By benchmarking the national or regional
+averages first, it is possible to isolate differences due to accounting practices or other
+        differences that affect all companies from a given country.</p>
+<p>&nbsp;&nbsp;&nbsp;The results are presented in Figure 5. The arrows indicate movements from year to
+year, starting from 1995. The Finnish average’s movements are shown using solid lines,</p>
+    <p>Figure 5: Country averages for the years 1995-2000</p>
+        <center>
+    <img src="image2.png">
+        </center>
+    <p>Figure 6: Market pulp prices 1985-99 (Source: Metsäteollisuus ry Internal report;
+Keaton, 1999).</p>
+        <center>
+    <img src="image3.png">
+        </center>
+    <p>U.S. average’s movements using dashed lines, and Japanese average’s movements
+using dotted lines. The figure illustrates that the performance of Finnish companies, on
+average, has been slightly above average. The Finnish average has remained in Group
+C throughout the experiment, except for during 1995, when it was within Group A2. This
+implies that while Return on Equity has been high, other profitability ratios have been
+average. This is probably due to the common Finnish practice of heavy financing by debt.
+Where Return on Total Assets is considered, Finnish performance is merely average.
+Finnish Quick Ratios, on the other hand, are very good throughout, and excellent during
+        1998-2000.</p>
+<p>&nbsp;&nbsp;&nbsp;The excellent performance of the Scandinavian countries during 1995 is very
+interesting. During 1995, Finnish, Swedish, and Norwegian companies, on average,
+outperformed all other companies, except for Canadian companies. However, the following years indicate drastically reduced profitability. A likely explanation for this trend is
+the fall in market pulp prices during the later half of the 1990s. In 1995, market pulp prices
+were very high (USD 871 / metric ton), but fell drastically during the following years to
+    USD 480 / metric ton in mid 1999 (Keaton, 1999). Pulp prices are illustrated in Figure 6.</p>
+<p>&nbsp;&nbsp;&nbsp;The poorest average is displayed by Japan. The Japanese average is consistently
+in one of the two poor groups, Group D or E. The drop during 1997 is likely due to the
+Asian financial crisis. Interestingly, the Asian financial crisis does not seem to affect
+other countries as badly as might be expected. The national averages of Sweden, Norway,
+and the U.S. do drop somewhat, but not nearly as dramatically or obviously as the
+    Japanese average.</p>
+<p>&nbsp;&nbsp;&nbsp;Another factor that might affect the Japanese average is prevailing accounting
+laws. Japanese accounting laws are very restrictive, compared to, for example, U.S.
+accounting laws. For example, Japanese companies value assets at historical costs, never
+at valuation. They are also forced to establish non-distributable legal reserves, and most
+costs must be capitalized directly. Also, with accounting statements being used to
+calculate taxation, there is an incentive to minimize profits. Overall, Japanese accounting</p>
+    <h4><b>Eklund, Back, Vanharanta & Visa</b></h4>
+    <p>principles can be seen as very conservative, and so might lead to understated asset and
+profit figures, especially when compared to U.S. or other Anglo-Saxon figures. These
+factors might partly explain the poor performance of the Japanese companies in this
+        experiment (Nobes & Parker, 1991).</p>
+<p>&nbsp;&nbsp;&nbsp;Sweden, Norway, Europe, and the U.S. exhibit rather similar behavior, only really
+differing during the year 1995, when Finnish, Swedish, and Norwegian performance was
+excellent (Group A2
+). During most years, these countries show low to average profitability and average solvency. The companies in question are usually found in Groups C or
+D. Canadian companies consistently show better solvency than most companies from
+the other countries, being found in Group B during most years. Scandinavian accounting
+laws can also be seen as rather conservative, compared to Anglo-Saxon laws. Scandinavian companies also value assets at historical costs, but are, on the other hand, not
+    forced to establish non-distributable legal reserves.</p>
+<p>The widely differing results of the Finnish, Canadian, and Japanese companies
+indicate that national differences, such as financing practices or accounting differences,
+might have an effect on the overall positioning of companies on the map. On the other
+hand, the financial ratios have been chosen based on their reliability in international
+comparisons, in order to minimize differences relating to accounting practices.</p>
+    <h5><b>The Five Largest Pulp and Paper Companies</b></h5>
+    <p>In Figure 7, the Top Five pulp and paper manufacturing companies (Rhiannon et al.,
+2001) are benchmarked against each other. Again, the movements from year to year are
+illustrated with arrows: solid black lines for International Paper, dashed black lines for
+Georgia-Pacific, solid white lines for Stora Enso, dotted white lines for Oji Paper, and
+</p>
+    <p>Figure 7: Movements of the top five pulp and paper companies during the years 1995-
+2000.</p>
+        <center>
+    <img src="image4.png">
+        </center>
+    
+              </body>
+</html>
